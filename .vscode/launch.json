@@ -1,0 +1,47 @@
+// AUTOMATICALLY GENERATED FILE. PLEASE DO NOT MODIFY IT MANUALLY
+//
+// PIO Unified Debugger
+//
+// Documentation: https://docs.platformio.org/page/plus/debugging.html
+// Configuration: https://docs.platformio.org/page/projectconf/section_env_debug.html
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug",
+            "executable": "d:/Docs/PJs/Platformio/SAMD51_Prop/.pio/build/adafruit_feather_m4_Prop/firmware.elf",
+            "projectEnvName": "adafruit_feather_m4_Prop",
+            "toolchainBinDir": "D:/Docs/PJs/Platformio/PlatformioCoreDir/packages/toolchain-gccarmnoneeabi/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "D:/Docs/PJs/Platformio/PlatformioCoreDir/platforms/atmelsam/misc/svd/ATSAMD51J19A.svd",
+            "preLaunchTask": {
+                "type": "PlatformIO",
+                "task": "Pre-Debug"
+            }
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (skip Pre-Debug)",
+            "executable": "d:/Docs/PJs/Platformio/SAMD51_Prop/.pio/build/adafruit_feather_m4_Prop/firmware.elf",
+            "projectEnvName": "adafruit_feather_m4_Prop",
+            "toolchainBinDir": "D:/Docs/PJs/Platformio/PlatformioCoreDir/packages/toolchain-gccarmnoneeabi/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "D:/Docs/PJs/Platformio/PlatformioCoreDir/platforms/atmelsam/misc/svd/ATSAMD51J19A.svd"
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (without uploading)",
+            "executable": "d:/Docs/PJs/Platformio/SAMD51_Prop/.pio/build/adafruit_feather_m4_Prop/firmware.elf",
+            "projectEnvName": "adafruit_feather_m4_Prop",
+            "toolchainBinDir": "D:/Docs/PJs/Platformio/PlatformioCoreDir/packages/toolchain-gccarmnoneeabi/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "D:/Docs/PJs/Platformio/PlatformioCoreDir/platforms/atmelsam/misc/svd/ATSAMD51J19A.svd",
+            "loadMode": "manual"
+        }
+    ]
+}
