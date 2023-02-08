@@ -24,6 +24,9 @@ void SPI_CS(uint8_t ui18CS, uint8_t ui8Level ){
   // cambia qualcosa
 }
 
+
+
+
 void setupMySPI(void){
   //uint16_t ui16Receive, ui16Transmit = 0x80, ui16Res=0;
   uint16_t ui16Res=0;
@@ -51,8 +54,8 @@ void setupMySPI(void){
     // Read AccZ HIGH Byte
     //BeginTransaction(ICM_CS); //SPI_CS(ICM_CS,HIGH);
 
-    ui8High = ICM_ReadREG(MySPI, 0x31, ICM_CS);
-    ui8Low = ICM_ReadREG(MySPI, 0x32, ICM_CS);
+    ////ui8High = ICM_ReadREG(MySPI, 0x31, ICM_CS);
+    ////ui8Low = ICM_ReadREG(MySPI, 0x32, ICM_CS);
 
 
 
@@ -70,11 +73,11 @@ void setupMySPI(void){
     //EndTransaction(ICM_CS); //SPI_CS(ICM_CS,LOW);
     */
 
-    ui16Res = ui8High;
-    ui16Res <<= 8;
-    ui16Res |= ui8Low;
+    ////ui16Res = ui8High;
+    ////ui16Res <<= 8;
+    ////ui16Res |= ui8Low;
 
-    
+    ui16Res = getAccAxis(MySPI, zAxis);
     
     Serial.printf("High %d\t Low %d\tAcc Z  %d\n ", ui8High, ui8Low, ui16Res);
     

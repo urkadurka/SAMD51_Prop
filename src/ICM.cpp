@@ -74,3 +74,19 @@ uint8_t ICM_WriteREG(SPIClass locSPI, uint8_t ui8Reg, uint8_t uiCS){
 
   return(ui8Rx);
 }
+
+uint16_t getAccAxis(SPIClass locSPI, AccAxis enAxis){
+  uint8_t ui8Low, ui8High;
+  uint16_t ui16Res;
+
+  ui8High = ICM_ReadREG(locSPI, enAxis, ICM_CS);
+  ui8Low = ICM_ReadREG(locSPI, enAxis+1, ICM_CS);
+   
+  //ui8High = ICM_ReadREG(locSPI, 0x31, ICM_CS);
+  //ui8Low = ICM_ReadREG(locSPI, 0x32, ICM_CS);
+
+  ui16Res = ui8High;
+  ui16Res <<= 8;
+  ui16Res |= ui8Low;
+  return(ui16Res);
+}
