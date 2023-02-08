@@ -45,45 +45,42 @@ void setupMySPI(void){
 
   ui8Low = ICM_DeviceReset(MySPI, ICM_CS);
 
-  ui8Low = ICM_WhoAmI(MySPI, ICM_CS);
-  Serial.printf("Who Am I %d\t ", ui8Low);
+  //ui8Low = ICM_WhoAmI(MySPI, ICM_CS);
+  //Serial.printf("Who Am I %d\t ", ui8Low);
 
   //BeginTransaction(ICM_CS); //SPI_CS(ICM_CS,HIGH);
-  while(1){
-    // **************
-    // Read AccZ HIGH Byte
-    //BeginTransaction(ICM_CS); //SPI_CS(ICM_CS,HIGH);
+  // while(1){
+  //   // **************
+  //   // Read AccZ HIGH Byte
+  //   //BeginTransaction(ICM_CS); //SPI_CS(ICM_CS,HIGH);
 
-    ////ui8High = ICM_ReadREG(MySPI, 0x31, ICM_CS);
-    ////ui8Low = ICM_ReadREG(MySPI, 0x32, ICM_CS);
+  //   ////ui8High = ICM_ReadREG(MySPI, 0x31, ICM_CS);
+  //   ////ui8Low = ICM_ReadREG(MySPI, 0x32, ICM_CS);
 
 
 
-    /*SPI_CS(ICM_CS,LOW);
-    ui8High =SPI3.transfer((0x31 | 0x80));
-    ui8High =SPI3.transfer((0xFF));
-    //SPI_CS(ICM_CS,HIGH);
-    //EndTransaction(ICM_CS); //SPI_CS(ICM_CS,LOW);
+  //   SPI_CS(ICM_CS,LOW);
+  //   ui8High =SPI3.transfer((0x31 | 0x80));
+  //   ui8High =SPI3.transfer((0xFF));
+  //   //SPI_CS(ICM_CS,HIGH);
+  //   //EndTransaction(ICM_CS); //SPI_CS(ICM_CS,LOW);
 
-    //BeginTransaction(ICM_CS); //SPI_CS(ICM_CS,HIGH);
-    //SPI_CS(ICM_CS,LOW);
-    ui8Low =SPI3.transfer((0x32 | 0x80));
-    ui8Low =SPI3.transfer((0xFF));
-    SPI_CS(ICM_CS,HIGH);
-    //EndTransaction(ICM_CS); //SPI_CS(ICM_CS,LOW);
-    */
+  //   //BeginTransaction(ICM_CS); //SPI_CS(ICM_CS,HIGH);
+  //   //SPI_CS(ICM_CS,LOW);
+  //   ui8Low =SPI3.transfer((0x32 | 0x80));
+  //   ui8Low =SPI3.transfer((0xFF));
+  //   SPI_CS(ICM_CS,HIGH);
+  //   //EndTransaction(ICM_CS); //SPI_CS(ICM_CS,LOW);
+  //   */
 
-    ////ui16Res = ui8High;
-    ////ui16Res <<= 8;
-    ////ui16Res |= ui8Low;
+  //   ////ui16Res = ui8High;
+  //   ////ui16Res <<= 8;
+  //   ////ui16Res |= ui8Low;
 
-    ui16Res = getAccAxis(MySPI, zAxis);
+  //   ui16Res = getAccAxis(MySPI, zAxis);
     
-    Serial.printf("High %d\t Low %d\tAcc Z  %d\n ", ui8High, ui8Low, ui16Res);
+  //   Serial.printf("High %d\t Low %d\tAcc Z  %d\n ", ui8High, ui8Low, ui16Res);
     
-    delay(100); /*
-    int aa=0;
-    aa++;
-    delay(100);*/
-  }
+  //   delay(100); 
+  //}
 }
